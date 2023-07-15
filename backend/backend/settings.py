@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # Plugin
     'rest_framework',
     # User Apps
-    'api.apps.AppConfig',
+    "api.apps.ApiConfig",
     # Third-party Libraries
     'corsheaders'
 ]

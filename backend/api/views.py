@@ -1,5 +1,10 @@
 from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
+
+
+@api_view(["GET"])
 def getRoutes(request):
     routes = [
         {
@@ -17,7 +22,7 @@ def getRoutes(request):
         {
             'Endpoint': '/notes/create',
             'method': 'POST',
-            'body': {"body": " " },
+            'body': {"body": " "},
             'description': 'Create a note with data form'
         },
         {
@@ -33,4 +38,4 @@ def getRoutes(request):
             'description': 'Delete an existing note'
         },
     ]
-    return JsonResponse(routes)
+    return Response(routes)
