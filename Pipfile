@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-browser-reload = "*"
+django-compressor = "*"
+django-debug-toolbar = "*"
+django-filter = "*"
+django-pwa = "*"
+django-rosetta = "*"
+django-tailwind = "*"
+djangorestframework = "*"
+gunicorn = "*"
+markdown = "*"
+numpy = "*"
+pandas = "*"
+pika = "*"
+pillow = "*"
+pipenv = "*"
+psycopg2-binary = "*"
+python-dotenv = "*"
+python-gettext = "*"
+pytz = "*"
+pyyaml = "*"
+requests = "*"
+django-cors-headers = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
