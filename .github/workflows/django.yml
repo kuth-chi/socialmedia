@@ -27,7 +27,10 @@ jobs:
         pip install -r requirements.txt
     - name: Collect Static Files
       run: |
-        cd backend && python manage.py collectstatic --noinput
+        cd backend
+        python manage.py collectstatic --noinput
     - name: Run Tests
       run: |
-        cd backend && python manage.py test
+        cd backend
+        python manage.py test
+        
