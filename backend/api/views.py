@@ -16,6 +16,7 @@ def get_notes(request):
     except Note.DoesNotExist:
         return Response('You do not have note yet')
 
+
 @api_view(['GET'])
 def get_notes_shared(request):
     shared = Share.objects.filter(user=request.user)
@@ -68,9 +69,9 @@ def update_note(request, pk):
     except Note.DoesNotExist:
         return Response({'detail': 'Note not found.'}, status=status.HTTP_404_NOT_FOUND)
 
+
 @api_view(['DELETE'])
 def delete_note(request, pk):
     note = Note.objects.get(pk=pk)
     note.delete()
     return Response('Note was deleted')
-
