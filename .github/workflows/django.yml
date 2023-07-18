@@ -25,6 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+<<<<<<< HEAD
     - name: Collect Static Files
       run: |
         cd backend
@@ -34,3 +35,8 @@ jobs:
         cd backend
         python manage.py test
         
+=======
+    - name: Run Tests
+      run: |
+        cd backend && python manage.py collectstatic --noinput && python manage.py test
+>>>>>>> 31b8c04c339a78db7a6279db219e87554e1340db
